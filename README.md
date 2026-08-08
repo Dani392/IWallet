@@ -45,11 +45,11 @@ The app leverages on-device AI to eliminate friction from manual data entry.
   <tr>
     <td valign="top" align="center">
     <p align="center"><i>Automatically extracts totals and dates from physical receipts using Google ML Kit.</i></p>
-    <img src="assets/videos/video_demo_ocr_scan_0.gif" width="520" height="1000">
+    <img src="assets/videos/video_demo_ocr_scan_0.gif" width="430" height="820">
 </td>
 <td valign="top" align="center">
     <p align="center"><i>Analyzes amounts, dates, and context to automatically assign categories and concepts.</i></p>
-    <img src="assets/videos/video_demo_voice_input_0.gif" width="460" height="1000">
+    <img src="assets/videos/video_demo_voice_input_0.gif" width="380" height="820">
 </td>
   </tr>
 </table>
@@ -74,11 +74,11 @@ A dedicated dashboard built entirely with custom rendering (`CustomPainter`) for
   <tr>
     <td valign="top" align="center">
       <p align="center"><i>Instantly toggle between monthly and weekly comparative views.</i></p>
-      <img src="assets/videos/video_demo_analytics_nav.gif" width="460" height="1000">
+      <img src="assets/videos/video_demo_analytics_nav.gif" width="380" height="820">
     </td>
     <td valign="top" align="center">
       <p align="center"><i>Long press to reveal a line chart with daily breakdowns and dynamic scaling.</i></p>
-      <img src="assets/videos/video_demo_analytics_interaction.gif" width="460" height="1000">
+      <img src="assets/videos/video_demo_analytics_interaction.gif" width="380" height="820">
     </td>
   </tr>
 </table>
