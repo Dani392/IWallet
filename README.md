@@ -114,7 +114,7 @@ Built to be robust, highly customizable, and safe against user error, including 
       <img src="assets/images/demo_trash_0.jpeg" width="95%">
     </td>
     <td width="33.3%" align="center" valign="top">
-      <br><b>Trash Bin</b><br>
+      <br><b>Password</b><br>
       <img src="assets/images/demo_encrypted_ password_0.jpeg" width="95%">
     </td>
   </tr>
