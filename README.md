@@ -45,11 +45,11 @@ The app leverages on-device AI to eliminate friction from manual data entry.
   <tr>
     <td valign="top" align="center">
     <p align="center"><i>Automatically extracts totals and dates from physical receipts using Google ML Kit.</i></p>
-    <img src="assets/videos/video_demo_ocr_scan_0.gif" width="400" height="820">
+    <img src="assets/videos/video_demo_ocr_scan_0.gif" width="380" height="820">
 </td>
 <td valign="top" align="center">
     <p align="center"><i>Analyzes amounts, dates, and context to automatically assign categories and concepts.</i></p>
-    <img src="assets/videos/video_demo_voice_input_0.gif" width="360" height="820">
+    <img src="assets/videos/video_demo_voice_input_0.gif" width="380" height="820">
 </td>
   </tr>
 </table>
