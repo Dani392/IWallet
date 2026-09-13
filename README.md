@@ -8,7 +8,7 @@ Built with scalability and user experience in mind, this application goes far be
 
 ## ✨ Key Features
 
-* **🤖 Intelligent Data Entry:** Speech-to-text recognition with customizable processing rules and ticket scanning via OCR.
+* **🤖 Intelligent Data Entry:** Speech-to-text recognition with customizable processing rules and intelligent ticket scanning via Gemini OCR API.
 * **📊 Advanced Analytics Dashboard:** Interactive comparative bar charts (monthly and weekly). Long-press reveals dynamic daily breakdowns via line charts.
 * **🔍 Deep Filtering:** Global search across concepts and notes, combined with custom category tags and date range filters.
 * **⚙️ High Customization:** Management of custom concepts, setting monthly spending limits, and defining global budget alerts.
@@ -20,7 +20,7 @@ Built with scalability and user experience in mind, this application goes far be
 * **Local Storage:** [Hive](https://pub.dev/packages/hive) (Lightweight NoSQL database).
 * **State Management:** Native and reactive `ValueListenableBuilder` tied to Hive database mutations.
 * **AI & Hardware Integration:**
-  * `google_mlkit_text_recognition`: On-device machine learning for OCR.
+  * **Gemini API:** Cloud-based multimodal OCR and text processing for smart receipt and ticket data extraction.
   * `speech_to_text`: Microphone hardware access.
   * Complex Regex algorithms for natural language processing (entities, dates, amounts).
 * **Custom UI & Charts:** Analytical charts natively implemented using `CustomPainter` and `InteractiveViewer` for horizontal scrolling.
@@ -31,7 +31,7 @@ Built with scalability and user experience in mind, this application goes far be
 
 ### 1. Intelligent Data Entry (OCR & Voice)
 
-The app leverages on-device AI to eliminate friction from manual data entry.
+The app leverages advanced AI to eliminate friction from manual data entry.
 
 <table width="100%" cellspacing="0" cellpadding="0">
   <tr>
@@ -44,7 +44,7 @@ The app leverages on-device AI to eliminate friction from manual data entry.
   </tr>
   <tr>
     <td valign="top" align="center">
-    <p align="center"><i>Automatically extracts totals and dates from physical receipts using Google ML Kit.</i></p>
+    <p align="center"><i>Automatically extracts totals and dates from physical receipts using the Gemini API.</i></p>
     <img src="assets/videos/video_demo_ocr_scan_0.gif" width="380" height="820">
 </td>
 <td valign="top" align="center">
