@@ -1,26 +1,29 @@
-# Smart-Expense-Tracker
+# IWallet
 
-A feature-rich Flutter expense tracker featuring intelligent voice input, OCR processing, interactive analytics, and reactive state management.
+A sleek, feature-rich Flutter personal finance dashboard featuring a dual-engine OCR (ML Kit + Gemini API), intelligent voice input, interactive analytics, reactive state management, and full bilingual support.
 
 ## 🚀 Overview
 
-Built with scalability and user experience in mind, this application goes far beyond basic CRUD operations. It acts as a comprehensive personal finance dashboard, offering intelligent data entry methods and deep analytics to help users maintain total control over their economy.
+Built with scalability and user experience in mind, IWallet goes far beyond basic CRUD operations. It acts as a comprehensive personal finance dashboard with a minimalist, distraction-free identity (Freemium-ready architecture). It offers intelligent data entry methods and deep analytics to help users maintain total control over their economy without sacrificing privacy or speed.
 
-## ✨ Key Features
+## ✨ Key Features & Technical Architecture
 
-* **🤖 Intelligent Data Entry:** Speech-to-text recognition with customizable processing rules and intelligent ticket scanning via Gemini OCR API.
+* **🤖 Dual-Engine OCR (Local & Cloud):** Receipt scanning adapts to the user. By default, it utilizes **Google ML Kit** for instant, 100% offline, privacy-first processing. If a user configures a Gemini API key, the engine seamlessly upgrades to Generative AI for surgical data extraction.
+* **🛡️ Fail-Safe Architecture (Automatic Fallback):** Zero downtime data entry. If the Gemini API experiences network drops, timeouts, or HTTP errors, a `try-catch` interceptor silently reroutes the scan to the local ML Kit engine. The user gets their data without crashes or technical errors.
+* **🧹 Smart Data Cleaning (Standardization):** Advanced Regex parsers and strict Prompt Engineering proactively filter out noise (addresses, phone numbers, CIFs) from receipts, unifying notes under a strict, clean format: `Comercio: [Name]`.
+* **🌍 Bilingual Support (i18n):** Full dynamic localization allowing users to switch instantly between English and Spanish without restarting the application.
 * **📊 Advanced Analytics Dashboard:** Interactive comparative bar charts (monthly and weekly). Long-press reveals dynamic daily breakdowns via line charts.
-* **🔍 Deep Filtering:** Global search across concepts and notes, combined with custom category tags and date range filters.
-* **⚙️ High Customization:** Management of custom concepts, setting monthly spending limits, and defining global budget alerts.
-* **🛡️ Security & Reliability:** Built-in password protection, data export options, and a 7-day recovery recycle bin for secure management.
+* **🎙️ Intelligent Voice Input:** Speech-to-text recognition with customizable processing rules to automatically assign categories and amounts via NLP.
+* **⚙️ High Customization & Security:** Encrypted password protection, custom budget alerts, CSV data export, and a 7-day recovery recycle bin for secure management.
 
 ## 🛠️ Tech Stack & Development Flow
 
 * **Framework:** Flutter (Dart)
-* **Local Storage:** [Hive](https://pub.dev/packages/hive) (Lightweight NoSQL database).
+* **Local Storage:** [Hive](https://pub.dev/packages/hive) (Lightweight NoSQL database for ultra-fast, energy-efficient data and API Key persistence).
 * **State Management:** Native and reactive `ValueListenableBuilder` tied to Hive database mutations.
 * **AI & Hardware Integration:**
-  * **Gemini API:** Cloud-based multimodal OCR and text processing for smart receipt and ticket data extraction.
+  * **Google ML Kit:** On-device machine learning for offline text recognition.
+  * **Gemini API (Flash):** Cloud-based multimodal LLM for advanced semantic parsing.
   * `speech_to_text`: Microphone hardware access.
   * Complex Regex algorithms for natural language processing (entities, dates, amounts).
 * **Custom UI & Charts:** Analytical charts natively implemented using `CustomPainter` and `InteractiveViewer` for horizontal scrolling.
@@ -29,14 +32,14 @@ Built with scalability and user experience in mind, this application goes far be
 
 ## 📱 App Showcase & Key Interactions
 
-### 1. Intelligent Data Entry (OCR & Voice)
+### 1. Intelligent Data Entry (Dual OCR & Voice)
 
-The app leverages advanced AI to eliminate friction from manual data entry.
+The app leverages a hybrid AI architecture to eliminate friction from manual data entry.
 
 <table width="100%" cellspacing="0" cellpadding="0">
   <tr>
     <td width="50%" align="center" valign="top">
-      <b>📷 OCR Ticket Scanner</b>
+      <b>📷 Dual-Logic OCR Scanner</b>
     </td>
     <td width="50%" align="center" valign="top">
       <b>🎙️ Voice Input (NLP)</b>
@@ -44,7 +47,7 @@ The app leverages advanced AI to eliminate friction from manual data entry.
   </tr>
   <tr>
     <td valign="top" align="center">
-    <p align="center"><i>Automatically extracts totals and dates from physical receipts using the Gemini API.</i></p>
+    <p align="center"><i>Extracts totals, dates, and clean vendor names using offline ML Kit or advanced Gemini AI with automatic fail-safe fallback.</i></p>
     <img src="assets/videos/video_demo_ocr_scan_0.gif" width="380" height="820">
 </td>
 <td valign="top" align="center">
@@ -54,7 +57,7 @@ The app leverages advanced AI to eliminate friction from manual data entry.
   </tr>
 </table>
 
-> **Note:** Voice-to-text recognition and receipt OCR scanning are considered experimental features. Accuracy may vary depending on environmental factors, camera quality, and voice clarity. Continuous optimization of the parsing algorithms is currently underway.
+> **Note:** Voice-to-text recognition and receipt OCR scanning are continuously optimized. The dual OCR architecture guarantees that if the AI cloud extraction fails or is unavailable, the local ML Kit engine takes over instantly.
 
 <br>
 
@@ -87,7 +90,7 @@ A dedicated dashboard built entirely with custom rendering (`CustomPainter`) for
 
 ### 3. Comprehensive Management, Settings & Security
 
-Built to be robust, highly customizable, and safe against user error, including encrypted password protection, CSV export, and a preventive deletion system.
+Built to be robust, highly customizable, and safe against user error, including encrypted password protection, bilingual toggles, CSV export, and a preventive deletion system.
 
 <table width="100%" cellspacing="0" cellpadding="0">
   <tr>
@@ -106,7 +109,7 @@ Built to be robust, highly customizable, and safe against user error, including 
   </tr>
   <tr>
     <td width="33.3%" align="center" valign="top">
-      <br><b>Settings</b><br>
+      <br><b>Settings & i18n</b><br>
       <img src="assets/images/demo_settings_management_0.jpeg" width="95%">
     </td>
     <td width="33.3%" align="center" valign="top">
