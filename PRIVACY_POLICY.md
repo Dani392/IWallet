@@ -1,34 +1,53 @@
 # Privacy Policy for IWallet
 
-**Last updated:** September 20, 2026
+**Last updated:** 02/11/2026
 
-Dani built the IWallet app as a Free application. This SERVICE is provided by Dani at no cost and is intended for use as is.
+IWallet ("the app") is a personal income and expense tracker developed by Dani ("the developer"). This policy explains what information the app handles, where it goes, and what choices you have. Spanish version: [PRIVACY_POLICY.es.md](PRIVACY_POLICY.es.md).
 
-This page is used to inform visitors regarding our policies with the collection, use, and disclosure of Personal and Financial Information if anyone decided to use our Service.
+## 1. Data stored on your device
 
-### 1. Information Collection and Use
-IWallet is designed with a strict **privacy-by-default and local processing** approach. The application does not require user registration, does not use proprietary servers to store information, and all financial data (expenses, categories, budgets, notes) is saved **exclusively on the device's internal storage** using a local database. The developer has no access to, nor does it collect or monitor, your financial data.
+All your financial data (transactions, categories, concepts, limits, notes), your settings and your access PIN are stored **only on your device**, in the app's private storage. The app has no user accounts and no developer-operated server that stores your financial data. The developer cannot see it.
 
-To provide its core functionalities, IWallet requests the following native device permissions:
-* **Camera and Gallery:** Strictly necessary to capture or select images of receipts, invoices, or tickets for analysis.
-* **Microphone:** Required for the intelligent data entry feature using voice recognition.
+* **Access PIN:** stored as a hash (SHA-256), not in plain text.
+* **Gemini API key (optional):** if you enter your own key, it is stored locally on your device.
+* **Backups:** the app opts out of Android automatic cloud backup. Your data is not copied to Google Drive by the app. If you uninstall the app, its local data is deleted by the operating system. You can export your transactions to a CSV file at any time. You can delete any transaction from the Global tab by swiping it; deleted transactions go to the Trash (Settings > Trash), where you can restore them or delete them permanently, and they are removed automatically after 7 days. Categories and concepts can be edited or deleted from Settings. To remove all data at once, uninstall the app or clear its storage in Android settings.
 
-### 2. Data Processing and Third-Party Services (OCR & Voice)
-The processing of captured information operates through a dual system that guarantees user control:
-* **Local Mode (Default):** Receipt scanning is performed entirely offline on the device using Google ML Kit. Images of your receipts do not leave your phone and are not sent to any external server.
-* **Advanced Mode (Cloud AI):** If the user voluntarily chooses to configure a personal API Key in the application settings, receipt images will be temporarily transmitted to **Google Gemini** API servers for advanced data extraction. Google's handling of this data is governed by the [Google Privacy Policy](https://policies.google.com/privacy).
+## 2. Permissions
 
-### 3. Advertising and Tracking
-Currently, IWallet **does not include advertisements** and does not share, sell, or transfer any user information to advertising networks or third-party companies for commercial or tracking purposes.
+* **Camera / gallery (through the system picker):** to capture or choose a receipt image.
+* **Microphone:** for voice entry of transactions.
+* **Internet:** for the optional features described below.
 
-### 4. Data Security
-We value your trust in managing your financial information. IWallet provides device-level security measures, including application access protection via locally encrypted passwords (SHA-256 algorithm). Please remember that, since the application does not feature automatic cloud synchronization, the physical security of the device and the backing up of your data remain the responsibility of the user.
+## 3. Features that send data outside your device
 
-### 5. Data Retention and Deletion
-You have absolute control over your information. You can export your records (CSV) or permanently delete them at any time through the application settings. If you choose to uninstall IWallet from your device, all data stored locally by the application will be automatically and irreversibly destroyed by the operating system.
+**a) Receipt scanning with cloud AI (optional, off by default).** By default receipts are read locally on your device with Google ML Kit and the image does not leave your phone. If you choose to enter your own Google Gemini API key in Settings, the receipt image is sent to Google's Gemini API to extract the merchant, date and amount. Google processes it under its own terms: https://policies.google.com/privacy. If the cloud request fails, the app falls back to local reading and tells you.
 
-### 6. Changes to This Privacy Policy
-We may update our Privacy Policy from time to time, particularly as new features (such as cloud integrations or Freemium models) are introduced. You are advised to review this page periodically for any changes.
+**b) Voice entry.** Voice recognition uses the speech recognition service of your Android device, which is provided by Google and may process audio on Google's servers depending on your device settings. The app does not store the audio; it only receives the recognized text.
 
-### 7. Contact Us
-If you have any questions, suggestions, or technical concerns about this Privacy Policy, do not hesitate to contact the developer at: **dsalcedocias@gmail.com**
+**c) "Notify me" / suggestions form (optional).** If you open the form about upcoming features, you may choose to send:
+* your **email address** (only if you decide to enter it),
+* which upcoming features interest you,
+* a **free-text suggestion**,
+* the fact that you accepted this policy.
+
+This information is sent over HTTPS to a Google Apps Script endpoint and stored in a private Google Sheet that **only the developer can access**. Purpose: to notify you when the features you selected are available and to improve the app. Legal basis: your consent (you must tick the acceptance box). It is retained until the features launch or you ask for deletion. You can withdraw consent and request deletion at any time by emailing the contact address below. Please do not include sensitive personal data in the free-text suggestion.
+
+## 4. Advertising and tracking
+
+The app contains no advertising and no analytics or tracking tools, and the developer does not sell or share your information with advertisers.
+
+## 5. Your rights
+
+If you are in the European Economic Area or another region with similar laws, you have the right to access, correct, delete or restrict the data described in section 3c, and to withdraw consent. Contact the developer at the address below.
+
+## 6. Children
+
+The app is not directed to children under 13 (or the minimum age in your country).
+
+## 7. Changes to this policy
+
+If the app changes in a way that affects your data (for example cloud sync or paid plans), this policy will be updated and the date above changed.
+
+## 8. Contact
+
+dsalcedocias@gmail.com
